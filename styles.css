@@ -140,7 +140,7 @@ body {
 .header {
     background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    padding: 18px 0;
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 50;
@@ -170,7 +170,7 @@ body {
 }
 
 .logo-img {
-    max-height: 120px;
+    max-height: 80px;
     width: auto;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
@@ -517,10 +517,10 @@ body {
 }
 
 .text-highlight {
-    color: #E63946;
+    color: red;
     font-weight: 700;
     position: relative;
-    text-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
 .features {
