@@ -311,7 +311,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('https://homezies.com/wp-content/uploads/2025/05/3d-rendering-modern-design-marble-tile-toilet-bathroom_105762-2043.webp');
+    background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1050,6 +1050,41 @@ body {
     accent-color: var(--accent-color);
 }
 
+/* Compact Option List for Step 3 (Window Count) */
+.option-list-compact {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.option-item-compact {
+    padding: 12px 8px;
+    min-height: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.option-item-compact .option-label {
+    font-size: 14px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    line-height: 1.3;
+}
+
+.option-item-compact input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.option-list-2rows {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 /* Step Navigation */
 .step-navigation {
     display: flex;
@@ -1580,6 +1615,79 @@ body {
     transform: scale(1.2);
 }
 
+/* Popular Residential Window Styles Section */
+.popular-window-styles {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.popular-window-styles .section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.window-styles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.window-style-item {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.window-style-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+
+.window-style-image {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.window-style-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.window-style-item:hover .window-style-image img {
+    transform: scale(1.05);
+}
+
+.window-style-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.window-style-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
 /* Articles Section */
 .articles {
     padding: 60px 0;
@@ -1609,17 +1717,45 @@ body {
 
 .article-card {
     background-color: #ffffff;
-    padding: 30px;
     border-radius: 8px;
     transition: all 0.3s;
     border: 1px solid #e0e0e0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .article-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     border-color: var(--accent-color);
+}
+
+.article-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover .article-image img {
+    transform: scale(1.05);
+}
+
+.article-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .article-category {
@@ -1652,6 +1788,7 @@ body {
     line-height: 1.6;
     color: #555;
     margin-bottom: 15px;
+    flex: 1;
 }
 
 .article-link {
@@ -2368,8 +2505,58 @@ body {
         font-size: 14px;
     }
 
+    .option-list-compact {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .option-item-compact {
+        padding: 10px 8px;
+    }
+
+    .option-item-compact .option-label {
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .window-styles-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .window-style-image {
+        height: 220px;
+    }
+
+    .window-style-name {
+        font-size: 22px;
+    }
+
+    .popular-window-styles {
+        padding: 60px 0;
+    }
+
+    .popular-window-styles .section-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
     .articles-grid {
         grid-template-columns: 1fr;
+    }
+
+    .article-image {
+        height: 220px;
+    }
+
+    .article-content {
+        padding: 25px;
+    }
+
+    .article-title {
+        font-size: 20px;
     }
 
     .footer-content {
@@ -2396,6 +2583,67 @@ body {
     /* Top Bar Extra Small Screens */
     .top-bar {
         padding: 10px 0;
+    }
+
+    /* Popular Window Styles Extra Small Screens */
+    .popular-window-styles {
+        padding: 40px 0;
+    }
+
+    .popular-window-styles .section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .window-styles-grid {
+        gap: 25px;
+    }
+
+    .window-style-item {
+        padding: 20px 15px;
+    }
+
+    .window-style-image {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .window-style-name {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .window-style-description {
+        font-size: 14px;
+    }
+
+    .option-list-compact {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .option-item-compact {
+        padding: 12px 6px;
+    }
+
+    .option-item-compact .option-label {
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Article Cards Extra Small Screens */
+    .article-image {
+        height: 200px;
+    }
+
+    .article-content {
+        padding: 20px;
+    }
+
+    .article-title {
+        font-size: 18px;
     }
     
     .top-bar p {
